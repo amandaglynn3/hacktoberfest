@@ -38,3 +38,8 @@ int main(void)
 	}
 	return 0;
 }
+
+#pragma vector=TIMER0_A3_VECTOR
+__interrupt_ void Timer_A(void) {
+	
+}
