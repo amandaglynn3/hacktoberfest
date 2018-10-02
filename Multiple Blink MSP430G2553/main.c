@@ -15,6 +15,11 @@ int main(void)
 	P1OUT |= BIT0;              //set LED on
 	P1OUT &= ~BIT6;             //set other LED off
 	
+	//timer setup
+	TA0CCTL = TASSEL_1 + MC_1;
+	TA0CCR0 = 1000;
+	
+	
 	while (1) {
 	    unsigned int i, j;      //counters for delays
 
